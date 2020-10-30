@@ -31,7 +31,6 @@ class Main:
 
         self.out.close()
 
-
 path = glob.glob(".\\files\**")
 text_file_name = ".\\results\\" + "Data_Leafs.txt"
 if __name__ == '__main__':
