@@ -13,9 +13,8 @@ class LeafImage:
     def HSVAreas(self):
         hsv_image = cv.cvtColor(self.image, cv.COLOR_BGR2HSV)
         hsv_total_leaf_area = cv.inRange(hsv_image, (19, 38, 0), (101, 255, 255))
-        hsv_nondamage_area = cv.inRange(hsv_image, (35, 25, 25), (87, 255, 255))
-        hsv_damage_area = hsv_total_leaf_area - hsv_nondamage_area
-        hsv_non_damage_area = hsv_total_leaf_area - hsv_damage_area
+        hsv_non_damage_area = cv.inRange(hsv_image, (35, 25, 25), (87, 255, 255))
+        hsv_damage_area = hsv_total_leaf_area - hsv_non_damage_area
         return hsv_damage_area, hsv_non_damage_area
 
     def HSVtoBGR(self):

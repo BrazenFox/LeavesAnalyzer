@@ -10,8 +10,8 @@ class Main:
         self.run()
 
     def run(self):
+        self.out = open(text_file_name, "w")
         for directory in self.path:
-            self.out = open(text_file_name, "w")
             self.out.write(directory)
             self.out.write("\n")
             self.out.write("Number\tTotal Leaf Area\tPercent Leaf Damage\tImage name\n")
