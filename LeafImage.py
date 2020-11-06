@@ -54,3 +54,5 @@ class LeafImage:
         cv.imwrite(image_directory, self.GetImage())
         cv.imwrite(image_mask_on_leaf_directory, img_mask_on_leaf)
         cv.imwrite(img_mask_directory, img_mask)
+
+
