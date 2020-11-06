@@ -44,7 +44,7 @@ class LeafImageWithWatershed:
         return total_leaf_area, damage_area,  total_leaf_area_mask
 
     def CalculateDamage (self):
-        damage_area, total_leaf_area, a = self.HSVtoBGR()
+        total_leaf_area, damage_area, a = self.HSVtoBGR()
         GRAY_total_leaf_area = cv.cvtColor(total_leaf_area, cv.COLOR_BGR2GRAY)
         GRAY_damage_area = cv.cvtColor(damage_area, cv.COLOR_BGR2GRAY)
         total_area = cv.countNonZero(GRAY_total_leaf_area)
