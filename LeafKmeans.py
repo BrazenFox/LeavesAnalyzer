@@ -26,7 +26,6 @@ class LeafKmeans:
         center = np.uint8(center)
         result = center[label.flatten()].reshape((self.image.shape))
 
-
         hsv_image = cv.cvtColor(result, cv.COLOR_BGR2HSV)
         markers = np.zeros((hsv_image.shape[0], hsv_image.shape[1]), dtype="int32")
         markers[90:140, 90:140] = 255
